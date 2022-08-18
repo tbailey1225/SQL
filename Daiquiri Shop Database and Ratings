@@ -1,0 +1,32 @@
+--Create a store database
+
+CREATE TABLE Daiquiri_Shop(id INTEGER PRIMARY KEY, flavor TEXT, price INTEGER, manufacturer TEXT, quantity_sold INTEGER, quality TEXT);
+
+INSERT into Daiquiri_Shop values(1, "Strawberry", 5, "A", 12, "good");
+INSERT into Daiquiri_Shop values(2, "Watermelon", 5, "B", 6, "normal");
+INSERT into Daiquiri_Shop values(3, "Grape", 5, "C", 3,"normal");
+INSERT into Daiquiri_Shop values(4, "Pina colada", 8, "D", 4, "good");
+INSERT into Daiquiri_Shop values(5, "Hulk", 10, "A", 12, "Good");
+INSERT into Daiquiri_Shop values(6, "Blue Rasp", 5, "B", 6, "bad");
+INSERT into Daiquiri_Shop values(7, "Miami Vice", 10, "C", 3, "good");
+INSERT into Daiquiri_Shop values(8, "Mango", 5, "D", 4, "bad");
+INSERT into Daiquiri_Shop values(9, "Banana", 5, "A", 12, "normal");
+INSERT into Daiquiri_Shop values(10, "Lime", 5, "B", 6, "normal");
+INSERT into Daiquiri_Shop values(11, "Coconut-Lime", 8, "C", 3, "good");
+INSERT into Daiquiri_Shop values(12, "Mango-Coconut", 10, "D", 4, "normal");
+INSERT into Daiquiri_Shop values(13,"Pineapple", 5, "A", 12, "good");
+INSERT into Daiquiri_Shop values(14, "Pineapple-Mango", 8, "B", 6, "good");
+INSERT into Daiquiri_Shop values(15, "Skinny Strawberry", 8, "C", 3, "good");
+
+--display the database ordered by price.
+SELECT * FROM Daiquiri_Shop ORDER BY price ASC;
+
+--Create table to manufacture's code
+CREATE TABLE company(manufacturer text primary key, name text);
+SELECT * FROM company;
+INSERT into company values("A", "ABC Syrup");
+INSERT into company values("B", "L.A. Daiq Supplies");
+INSERT into company values("C", "Restaurant Hub");
+INSERT into company values("D", "ATX Shop Supplies");
+
+SELECT * FROM company;
