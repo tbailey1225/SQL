@@ -1,0 +1,57 @@
+/* Creating a table about the NBA Hall of Famers */
+
+CREATE TABLE NBAPlayers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, team TEXT, retirement_age INTEGER);
+
+INSERT INTO NBAPlayers VALUES (1,"Kobe Bryant", "Lakers", 37);
+INSERT INTO NBAPlayers VALUES (2, "Michael Jordan", "Bulls", 40);
+INSERT INTO NBAPlayers VALUES (3, "Bill Russell", "Celtics", 35);
+INSERT INTO NBAPlayers VALUES (4, "Kareem Abdul-Jabbar", "Lakers", 42);
+INSERT INTO NBAPlayers VALUES (5, "Charles Barkley", "Rockets", 36);
+INSERT INTO NBAPlayers VALUES (6, "Wilt Chamberlain", "Lakers", 43);
+INSERT INTO NBAPlayers VALUES (7, "Dirk Nowitzki", "Mavericks", 43);
+INSERT INTO NBAPlayers VALUES (8, "Tim Duncan", "Spurs", 40);
+INSERT INTO NBAPlayers VALUES (9, "Larry Bird", "Celtics", 35);
+INSERT INTO NBAPlayers VALUES (10, "Allen Iverson","76ers",38);
+INSERT INTO NBAPlayers VALUES (11, "Tony Parker", "Spurs", 37);
+INSERT INTO NBAPlayers VALUES (12, "Manu Ginobili", "Spurs", 41);
+INSERT INTO NBAPlayers VALUES (13, "Hakeem Olajuwon", "Rockets", 34);
+INSERT INTO NBAPlayers VALUES (14, "Ray Allen", "Celtics", 38);
+INSERT INTO NBAPlayers VALUES (15,  "Kevin Garnett", "Celtics", 38);
+
+
+/* Creating a table about players (fictional) hobbies */
+
+CREATE TABLE PlayersHobbies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, Hobby TEXT, WeeklyHours INTEGER);
+INSERT INTO PlayersHobbies VALUES (1, "Kobe Bryant", "Coaching", 10);
+INSERT INTO PlayersHobbies VALUES (2, "Michael Jordan", "Golf", 12);
+INSERT INTO PlayersHobbies VALUES (3, "Bill Russell", "Painting", 5);
+INSERT INTO PlayersHobbies VALUES (4, "Kareem Abdul-Jabbar", "Boxing", 10);
+INSERT INTO PlayersHobbies VALUES (5,  "Charles Barkley", "Golf", 12); 
+INSERT INTO PlayersHobbies VALUES (6, "Wilt Chamberlain", "Smoking Cigars", 3);
+INSERT INTO PlayersHobbies VALUES (7, "Dirk Nowitzki", "Swimming", 5);
+INSERT INTO PlayersHobbies VALUES (8, "Tim Duncan", "Card Collector", NULL);
+INSERT INTO PlayersHobbies VALUES (9, "Larry Bird", "Coaching", 12);
+INSERT INTO PlayersHobbies VALUES (10, "Allen Iverson", "Football", 5); 
+INSERT INTO PlayersHobbies VALUES (11, "Tony Parker", "Golf", "20");
+INSERT INTO PlayersHobbies VALUES (12, "Manu Ginobili", "Coaching", 12);
+INSERT INTO PlayersHobbies VALUES (13, "Haleem Olajuwon", "Painting",  4);
+INSERT INTO PlayersHobbies VALUES (14, "Ray Allen", "Basketball", 4);
+INSERT INTO PlayersHobbies VALUES (15, "Kevin Garnett", "Volunteer", 5);
+
+/* Joining tables */
+
+SELECT n.name, p.Hobby
+FROM NBAPlayers n
+JOIN PlayersHobbies p
+ON n.id=p.id
+WHERE p.Hobby= "Golf";
+
+
+
+
+SELECT * 
+FROM PlayersHobbies
+WHERE WeeklyHours < 8
+ORDER BY WeeklyHours;
+
+SELECT * FROM NBAPlayers;
