@@ -69,7 +69,7 @@ ORDER BY popularity desc
 LIMIT 1;
 
 #Created CTE to calculate the average popularity for the artists from the table.
-#Then, for every artist with an average popularity of 90 or above, labeled "Top Star"
+#Then, for every artist with an average popularity of 90 or above, I labeled "Top Star"
 
 WITH popularity_avg_CTE AS(
 SELECT 
